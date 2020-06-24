@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Chat]
+(
+	ChatId INT NOT NULL PRIMARY KEY IDENTITY,
+	[Date] DateTime,
+	[Message] VARCHAR(255),
+	UserId INT NOT NULL,
+	RoomId INT NOT NULL,
+	[Type] VARCHAR(255),
+
+	CONSTRAINT FK_ChatUser FOREIGN KEY (UserId) REFERENCES [User](UserId),
+	CONSTRAINT FK_ChatRoom FOREIGN KEY (RoomId) REFERENCES Room(RoomId),
+)

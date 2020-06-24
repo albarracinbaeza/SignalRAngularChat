@@ -1,2 +1,116 @@
 Actualizar a angular 9
 ======================
+npm install
+ng update @angular/core @angular/cli
+ng update rxjs
+npm uninstall bootstrap
+npm uninstall jquery
+
+Agregar a la seccion schematics angular.json
+"schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+
+Modificar la seccion style de angular.json
+"styles": [
+              "src/styles.scss"
+            ]
+
+Modificar el archivo style.css a style.scss
+
+Eliminar : nav-menu, home, fetch-data y counter, eliminar tanto como archivos, como referencias en el app.component
+Modificar el main.ts eliminando la linea donde esta "@angular/platform-server"
+
+Modificar el comando "start" del package.json
+"start": "echo Starting... && ng serve",
+
+Agregar angular material
+ng add @angular/material
+Agregar a app.module los siguientes imports :
+FormsModule,
+ReactiveFormsModule,
+MatInputModule,
+MatIconModule,
+MatCardModule,
+MatFormFieldModule,
+MatTableModule,
+MatProgressSpinnerModule,
+MatSortModule,
+MatSnackBarModule,
+MatSidenavModule
+
+agregar a app.module el provider de date
+providers: [DatePipe],
+
+ng build
+
+Ejecuta el proyecto SignalRAngularChat.Client
+
+
+Creando un routing
+==================
+ng g module app-routing --flat --module=app
+Implemnetar app-routing
+Implementar el app.component con la llamada a los componentes en la declaracion
+Eliminar "RouterModule" de app.component
+
+Creando Login
+=============
+ng g component login -m=app
+En el routing agregar el componente
+Agregar el route 
+{ path: 'login', component: LoginComponent },
+Implementar login.html
+Implementar login.scss
+Implementar login.ts
+
+agregar modelo de usuario
+ng g class models/User
+
+agregar servicio de datos
+ng generate service services/data
+
+Creando AddRoom
+=============
+ng g component AddRoom -m=app
+En el routing agregar el componente
+Agregar el route 
+{ path: 'addroom', component: AddroomComponent },
+Implementar add-room.html
+Implementar add-room.scss
+Implementar add-room.ts
+
+agregar modelo de habitacion
+ng g class models/Room
+
+Creando RoomList
+================
+npm install @microsoft/signalr –-save
+ng g component roomlist -m=app
+En el routing agregar el componente
+Agregar el route 
+{ path: 'roomlist', component: RoomlistComponent },
+Implementar roomlist.html
+Implementar roomlist.scss
+Implementar roomlist.ts
+
+agregar modelo de habitacion
+ng g class models/Chat
+ng g class models/RoomUser
+
+agregar servicio de SignalR
+ng generate service services/SignalR
+
+Creando ChatRoom
+================
+ng g component ChatRoom -m=app
+
+
+
+
+
+Nota:
+SignalR necesita AllowCredentials()
+You cannot use both AllowAnyOrigin() and AllowCredentials()

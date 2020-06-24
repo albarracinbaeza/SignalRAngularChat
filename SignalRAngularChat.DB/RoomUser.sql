@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[RoomUser]
+(
+	RoomUserId INT NOT NULL PRIMARY KEY IDENTITY,
+	RoomId INT NOT NULL,
+	UserId INT NOT NULL,
+	[Status] VARCHAR(255),
+
+	CONSTRAINT FK_RoomUserRoom FOREIGN KEY (RoomId) REFERENCES Room(RoomId),
+	CONSTRAINT FK_RoomUserUser FOREIGN KEY (UserId) REFERENCES [User](UserId),
+)

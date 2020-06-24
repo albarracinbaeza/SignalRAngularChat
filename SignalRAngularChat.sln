@@ -10,6 +10,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Commands.txt = Commands.txt
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SignalRAngularChat.DB", "SignalRAngularChat.DB\SignalRAngularChat.DB.sqlproj", "{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAngularChat.Data", "SignalRAngularChat.Data\SignalRAngularChat.Data.csproj", "{2005AFE1-5A88-4E4A-9BB2-9EFEF815099A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAngularChat.DTO", "SignalRAngularChat.DTO\SignalRAngularChat.DTO.csproj", "{398F6C77-7EA4-4A4D-AAA7-6A82A88A65EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAngularChat.API", "SignalRAngularChat.API\SignalRAngularChat.API.csproj", "{B3753C30-9A9B-456A-9A35-B2ED3685A952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAngularChat.Application", "SignalRAngularChat.Application\SignalRAngularChat.Application.csproj", "{5A70C620-57BA-4E05-B016-CF52FC6EA643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAngularChat.Hub", "SignalRAngularChat.Hub\SignalRAngularChat.Hub.csproj", "{03D8A7B0-BA45-4DC5-923D-64DCFB645302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +32,32 @@ Global
 		{400C3785-F34D-4AA0-B5AA-7539B71F07AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400C3785-F34D-4AA0-B5AA-7539B71F07AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400C3785-F34D-4AA0-B5AA-7539B71F07AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91FEFE9-EFAC-4CFB-9378-A1BC09E8CF2A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2005AFE1-5A88-4E4A-9BB2-9EFEF815099A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2005AFE1-5A88-4E4A-9BB2-9EFEF815099A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2005AFE1-5A88-4E4A-9BB2-9EFEF815099A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2005AFE1-5A88-4E4A-9BB2-9EFEF815099A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398F6C77-7EA4-4A4D-AAA7-6A82A88A65EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398F6C77-7EA4-4A4D-AAA7-6A82A88A65EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398F6C77-7EA4-4A4D-AAA7-6A82A88A65EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398F6C77-7EA4-4A4D-AAA7-6A82A88A65EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3753C30-9A9B-456A-9A35-B2ED3685A952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3753C30-9A9B-456A-9A35-B2ED3685A952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3753C30-9A9B-456A-9A35-B2ED3685A952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3753C30-9A9B-456A-9A35-B2ED3685A952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A70C620-57BA-4E05-B016-CF52FC6EA643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A70C620-57BA-4E05-B016-CF52FC6EA643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A70C620-57BA-4E05-B016-CF52FC6EA643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A70C620-57BA-4E05-B016-CF52FC6EA643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D8A7B0-BA45-4DC5-923D-64DCFB645302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D8A7B0-BA45-4DC5-923D-64DCFB645302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D8A7B0-BA45-4DC5-923D-64DCFB645302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D8A7B0-BA45-4DC5-923D-64DCFB645302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

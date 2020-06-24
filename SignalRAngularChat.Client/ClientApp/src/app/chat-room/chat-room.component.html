@@ -1,0 +1,52 @@
+<div class="example-container mat-elevation-z8">
+  <mat-drawer-container class="drawer-container">
+    <mat-drawer mode="side" opened class="left-drawer">
+      <div class="users-pane">
+        <mat-card class="users-card">
+          <button type="button" mat-button matSuffix mat-icon-button aria-label="Exit" (click)="exitChat()">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </mat-card>
+        <div *ngFor="let userOnline of usersOnLine">
+          <mat-card class="users-card"  [ngClass]="{'user-login':(userOnline.UserId==userLogin.UserId)}">
+            <mat-icon>person</mat-icon> <span class="username">{{userOnline.UserName}}</span>
+          </mat-card>
+        </div>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content class="chat-pane">
+      <div #chatcontent [scrollTop]="scrolltop" class="chat-content">
+        <div class="message-box" *ngFor="let chat of chats">
+          <div class="chat-status" text-center *ngIf="chat.Type==='join'||chat.Type==='exit';else message">
+            <span class="chat-date">{{chat.Date | date:'short'}}</span>&nbsp;
+            <span class="chat-content-center">{{chat.Message}}</span>
+          </div>
+          <ng-template #message>
+            <div class="chat-message">
+              <div class="right-bubble" [ngClass]="{'right-bubble': chat.UserId === userLogin.UserId, 'left-bubble': chat.UserId !== userLogin.UserId}">
+                <span class="msg-name" *ngIf="chat.UserId === userLogin.UserId">Me</span>
+                <span class="msg-name" *ngIf="chat.UserId !== userLogin.UserId">{{getUserByUserId(chat.UserId).UserName}}</span>
+                <span class="msg-date"> at {{chat.Date | date:'short'}}</span>
+                <p text-wrap>{{chat.Message}}</p>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <footer class="sticky-footer">
+        <form class="message-form" [formGroup]="chatForm" (ngSubmit)="onFormSubmit(chatForm.value)">
+          <mat-form-field class="message-form-field">
+            <input matInput placeholder="Enter message here" formControlName="Message"
+                   [errorStateMatcher]="matcher">
+            <mat-error>
+              <span *ngIf="!chatForm.get('Message').valid && chatForm.get('Message').touched">Enter your message</span>
+            </mat-error>
+            <button type="submit" [disabled]="!chatForm.valid" mat-button matSuffix mat-icon-button aria-label="Send">
+              <mat-icon>send</mat-icon>
+            </button>
+          </mat-form-field>
+        </form>
+      </footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
