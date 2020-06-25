@@ -14,7 +14,7 @@ export class SignalRService {
   connectionEstablished = new EventEmitter<boolean>();
 
   private connectionIsEstablished = false;
-  private _hubConnection: signalR.HubConnection;  
+  private _hubConnection: signalR.HubConnection;
 
   constructor() {
     this.createConnection();
